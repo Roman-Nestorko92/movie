@@ -34,7 +34,7 @@ export default function Layout() {
 
   const location = useLocation();
   const navigate = useNavigate();
-
+  // user
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
