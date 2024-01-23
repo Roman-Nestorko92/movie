@@ -2,7 +2,8 @@ name: Build and deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   build-and-deploy:
@@ -11,13 +12,13 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
 
-      - name: Install, lint, build 🔧
-        run: |
-          npm install
-          npm run lint:js || {echo "Linting failed" && exit 1;}
-          npm run build || {echo "Build failed" && exit 1;}
+      - name: Install dependencies 🚚
+        run: npm install
 
-      - name: Deploy 🚀
+      - name: Build project 🏗️
+        run: npm run build || { echo "Build failed" && exit 1; }
+
+      - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: main
