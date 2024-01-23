@@ -30,7 +30,6 @@ export default function Layout() {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const [user, setUser] = useState({});
-  const [isRegistered, setIsRegistered] = useState(false);
   const [error, setError] = useState(null);
 
   const location = useLocation();
@@ -45,10 +44,6 @@ export default function Layout() {
       unSubscribe();
     };
   }, []);
-
-  useEffect(() => {
-    setIsRegistered(!!user); // Перевірка, чи існує користувач
-  }, [user]);
 
   const registration = async () => {
     setError(null);
