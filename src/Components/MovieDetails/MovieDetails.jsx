@@ -1,19 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  ButtonGoBack,
+  CustomLinkReviewCast,
+  InfoFilmList,
+  Overview,
+  ReviewCastList,
+  TitleNameMovie,
+} from "./movieDetails.styled";
 
 export default function MovieDetails({ movieInfo, handleGoBack }) {
   const { title, posterPath, overview, voteAverage, releaseDate } = movieInfo;
 
   return (
     <div>
-      <button
+      <ButtonGoBack
         onClick={handleGoBack}
         type="button"
       >
         / go back{" "}
-      </button>
-      <h2>Title: {title}</h2>
-      <ul>
+      </ButtonGoBack>
+      <TitleNameMovie>Title: {title}</TitleNameMovie>
+      <InfoFilmList>
         <li>
           <img
             src={
@@ -27,7 +35,7 @@ export default function MovieDetails({ movieInfo, handleGoBack }) {
           />
         </li>
         <li>
-          <p>Overview: {overview}</p>
+          <Overview>Overview: {overview}</Overview>
         </li>
         <li>
           <p>Release date: {releaseDate}</p>
@@ -35,16 +43,16 @@ export default function MovieDetails({ movieInfo, handleGoBack }) {
         <li>
           <p>Rating: {voteAverage}</p>
         </li>
-      </ul>
+      </InfoFilmList>
 
-      <ul>
+      <ReviewCastList>
         <li>
-          <Link to="cast">Cast</Link>
+          <CustomLinkReviewCast to="cast">Cast</CustomLinkReviewCast>
         </li>
         <li>
-          <Link to="reviews">Reviews</Link>
+          <CustomLinkReviewCast to="reviews">Reviews</CustomLinkReviewCast>
         </li>
-      </ul>
+      </ReviewCastList>
     </div>
   );
 }

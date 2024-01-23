@@ -1,17 +1,18 @@
 import React from "react";
 import MovieList from "../MovieList/MovieList";
+import { IndexLIstItem, IndexList, TitleMovie } from "./homeList,styled";
 
 export default function HomeList() {
   return (
     <>
-      <ul style={{ listStyle: "none" }}>
-        <li>
-          <h2>Trending movies:</h2>
-        </li>
-        <li>
+      <IndexList>
+        <IndexLIstItem>
+          <TitleMovie>Trending movies:</TitleMovie>
+        </IndexLIstItem>
+        <IndexLIstItem>
           <MovieList />
-        </li>
-      </ul>
+        </IndexLIstItem>
+      </IndexList>
     </>
   );
 }

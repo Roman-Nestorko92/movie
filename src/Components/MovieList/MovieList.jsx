@@ -1,22 +1,25 @@
 import React from "react";
 import GetTrending from "../api/GetTrending";
-import { Link } from "react-router-dom";
+
+import { CustomLink, MovieListItem, MovieListMovie } from "./movielist.styled";
 
 export default function MovieList() {
   const trendMovies = GetTrending();
 
   return (
     <>
-      <ul>
+      <MovieListMovie>
         {trendMovies.map((movie) => (
-          <Link
+          <CustomLink
             key={movie.id}
             to={`/movies/${movie.id}`}
           >
-            <li>{movie.title ? movie.title : "no title"}</li>
-          </Link>
+            <MovieListItem>
+              {movie.title ? movie.title : "no title"}
+            </MovieListItem>
+          </CustomLink>
         ))}
-      </ul>
+      </MovieListMovie>
     </>
   );
 }

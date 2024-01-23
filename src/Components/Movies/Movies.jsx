@@ -1,5 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  CustomButtomSearch,
+  CustomFormSearch,
+  CustomInput,
+  CustomLabel,
+  CustomLinkMovieItem,
+  CustomLinkMovieList,
+  FirstSearchItem,
+  SearchList,
+  SecondSearchItem,
+  TitleMovieListSearch,
+} from "./movies.styled";
 
 export default function Movies({
   searchMovieList,
@@ -9,29 +21,39 @@ export default function Movies({
 }) {
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Search movie:{" "}
-          <input
-            onChange={handleChange}
-            value={searchMovie}
-            type="text"
-            name="name"
-            required
-          />
-        </label>{" "}
-        <button>search</button>
-      </form>
+      <CustomFormSearch onSubmit={handleSubmit}>
+        <SearchList>
+          <FirstSearchItem>
+            <CustomLabel>Search movie:</CustomLabel>
+          </FirstSearchItem>
+          <SecondSearchItem>
+            {" "}
+            <CustomInput
+              onChange={handleChange}
+              value={searchMovie}
+              type="text"
+              name="name"
+              placeholder="Enter movie name"
+              required
+            />
+          </SecondSearchItem>
+          <li>
+            <CustomButtomSearch>Search</CustomButtomSearch>
+          </li>
+        </SearchList>
+      </CustomFormSearch>
       {searchMovieList.length === 0 ? (
-        <h2>No any movie</h2>
+        <TitleMovieListSearch>Enter movie</TitleMovieListSearch>
       ) : (
         searchMovieList.map(({ id, title }) => (
-          <Link
+          <CustomLinkMovieList
             key={id}
             to={`/movies/${id}`}
           >
-            <li>{title ? title : "No title"}</li>
-          </Link>
+            <CustomLinkMovieItem>
+              {title ? title : "No title"}
+            </CustomLinkMovieItem>
+          </CustomLinkMovieList>
         ))
       )}
     </>

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import GetMovieCredits from "../api/GetMovieCredits";
+import myKitty from "../../img/catty-min.jpg";
+import { ActorsList, ImageActor } from "./cast.styled";
 
 export default function Cast() {
   const [actorsInfo, setActorsInfo] = useState([]);
@@ -30,21 +32,21 @@ export default function Cast() {
 
   return (
     <>
-      <ul>
+      <ActorsList>
         {actorsInfo.map(({ name, profilePath }) => (
           <li key={name}>
-            <img
+            <ImageActor
               src={
                 profilePath
                   ? `https://image.tmdb.org/t/p/w200/${profilePath}`
-                  : "no photo"
+                  : myKitty
               }
               alt="name"
             />
             <p>{name}</p>
           </li>
         ))}
-      </ul>
+      </ActorsList>
     </>
   );
 }
