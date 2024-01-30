@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/movie/static/css/main.328c6e00.css",
+    "main.js": "/movie/static/js/main.fa44bf00.js",
+    "static/media/catty-min.jpg": "/movie/static/media/catty-min.50071966aa8879b6d876.jpg",
+    "index.html": "/movie/index.html",
+    "main.328c6e00.css.map": "/movie/static/css/main.328c6e00.css.map",
+    "main.fa44bf00.js.map": "/movie/static/js/main.fa44bf00.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.328c6e00.css",
+    "static/js/main.fa44bf00.js"
+  ]
+}
