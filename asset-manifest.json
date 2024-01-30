@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/movie/static/css/main.328c6e00.css",
-    "main.js": "/movie/static/js/main.800da9c9.js",
+    "main.js": "/movie/static/js/main.c380d4d8.js",
     "static/media/catty-min.jpg": "/movie/static/media/catty-min.50071966aa8879b6d876.jpg",
     "index.html": "/movie/index.html",
     "main.328c6e00.css.map": "/movie/static/css/main.328c6e00.css.map",
-    "main.800da9c9.js.map": "/movie/static/js/main.800da9c9.js.map"
+    "main.c380d4d8.js.map": "/movie/static/js/main.c380d4d8.js.map"
   },
   "entrypoints": [
     "static/css/main.328c6e00.css",
-    "static/js/main.800da9c9.js"
+    "static/js/main.c380d4d8.js"
   ]
 }
