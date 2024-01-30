@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const KEY = "e37afbe8681f4152ae6f2e33bec3a5b8";
 const URL = "https://api.themoviedb.org/3/trending/all/day";
