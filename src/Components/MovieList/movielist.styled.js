@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 
 export const MovieListMovie = styled.ol`
-  padding-left: 20px;
+  padding-left: 30px;
   width: fit-content;
 `;
 

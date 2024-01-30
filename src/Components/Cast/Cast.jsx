@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import GetMovieCredits from "../api/GetMovieCredits";
 import myKitty from "../../img/catty-min.jpg";
-import { ActorsList, ImageActor } from "./cast.styled";
+import { ActorsList, ImageActor, ActorItem } from "./cast.styled";
 
 export default function Cast() {
   const [actorsInfo, setActorsInfo] = useState([]);
@@ -34,7 +34,7 @@ export default function Cast() {
     <>
       <ActorsList>
         {actorsInfo.map(({ name, profilePath }) => (
-          <li key={name}>
+          <ActorItem key={name}>
             <ImageActor
               src={
                 profilePath
@@ -44,7 +44,7 @@ export default function Cast() {
               alt="name"
             />
             <p>{name}</p>
-          </li>
+          </ActorItem>
         ))}
       </ActorsList>
     </>
