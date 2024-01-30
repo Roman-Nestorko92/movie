@@ -2,7 +2,7 @@
   "name": "my-movie",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://roman-nestorko92.github.io/my-movie/",
+  "homepage": "https://Roman-Nestorko92.github.io/movie",
   "dependencies": {
     "@emotion/styled": "^11.11.0",
     "@testing-library/jest-dom": "^5.17.0",
@@ -20,7 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint:js": "eslint src/**/*.{js,jsx}"
+    "lint:js": "eslint src/**/*.{js,jsx}",
+    "deploy": "npm run build && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
