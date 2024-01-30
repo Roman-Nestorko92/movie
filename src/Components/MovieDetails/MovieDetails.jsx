@@ -18,7 +18,7 @@ export default function MovieDetails({ movieInfo, handleGoBack }) {
         onClick={handleGoBack}
         type="button"
       >
-        / go back{" "}
+        / back{" "}
       </ButtonGoBack>
       <TitleNameMovie>Title: {title}</TitleNameMovie>
       <InfoFilmList>

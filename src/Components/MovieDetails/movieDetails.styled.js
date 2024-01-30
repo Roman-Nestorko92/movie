@@ -2,15 +2,16 @@ import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 
 export const ButtonGoBack = styled.button`
-  padding: 8px 28px;
+  padding: 4px 18px;
 
   border: none;
   border-radius: 4px;
-  background-color: red;
+  background-color: #ff0112;
   margin-left: 10px;
 
   font-family: "Courier New", Courier, monospace;
   font-weight: 600;
+  color: #212121;
 `;
 
 export const TitleNameMovie = styled.h2`
